@@ -1,10 +1,36 @@
 {
-    "type": "$agent.connect",
-    "options": {
+  "$jason": {
+    "head": {
+      "title": "1320social",
+      "actions": {
+        "visit": [
+          {
+            "{{#if /\\/edit/.test($jason.url)}}": {
+              "type": "$href",
+              "options": {
+                "url": "https://beta.1320.social",
+                "preload": {
+                  "background": "#ffffff"
+                }
+              }
+            }
+          },
+          {
+            "{{#else}}": {
+              "type": "$default"
+            }
+          }
+        ]
+      }
+    },
+    "body": {
+      "background": {
+        "type": "html",
         "url": "https://beta.1320.social",
-        "id": "app",
         "action": {
-            "type": "$default"
+          "trigger": "visit"
         }
+      }
     }
+  }
 }
