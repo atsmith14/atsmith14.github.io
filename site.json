@@ -1,0 +1,10 @@
+{
+    "type": "$agent.connect",
+    "options": {
+        "url": "https://beta.1320.social",
+        "id": "app",
+        "action": {
+            "type": "$default"
+        }
+    }
+}
